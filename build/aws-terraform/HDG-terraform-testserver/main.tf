@@ -41,11 +41,10 @@ resource "null_resource" "build_git_repo" {
       "echo 'AWS EC2 CONTROLLER ${var.instance_type}'",
       "echo 'Initial configuration ${timestamp()}'",
       "sudo apt update",
-      "sudo apt install -y git",
+      "sudo apt install -y git dos2unix",
       "sudo rm -rf  ${var.git_repo_dir}",
       "git clone -b ${var.git_branch} ${var.git_repo} ${var.git_repo_dir}",
-      "cd ${var.git_repo_dir} && git pull origin ${var.git_branch}",
-      "cd /home/ubuntu/${var.git_repo_dir}",
+      "cd ${var.git_repo_dir}",
       "mkdir -p logs"
     ]
   }
@@ -63,7 +62,7 @@ resource "null_resource" "resume_configuration" {
     type        = "ssh"
     user        = var.ssh_user
     host        = aws_instance.DATA472-jre141-hdg-terraform-testserver.public_ip
-    private_key = file("//mnt//c//Users//jacob//Downloads//${var.instance_keypair_name}.pem")
+    private_key = file("${var.wsl_path}//${var.instance_keypair_name}.pem")
   }
 
   provisioner "remote-exec" {
