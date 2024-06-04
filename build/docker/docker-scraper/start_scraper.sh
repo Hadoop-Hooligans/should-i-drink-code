@@ -1,5 +1,5 @@
 #!/bin/bash
-log_file="../../../logs/$(date +'%Y-%d-%m_%H-%M')-pythonscraper.log"
+log_file="../../../logs/$(date +'%Y-%d-%m_%H-%M_%H-%M')-pythonscraper.log"
 
 mc_details=("$(uname)" "$(lsb_release -c | awk '{print $2}')")
 cat << EOF >> "$log_file"

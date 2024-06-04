@@ -1,7 +1,7 @@
 #!/bin/bash
 # ensure terraform has been initialised
 bash init_terraform.sh
-log_file="../../../logs/$(date +'%Y-%d-%m')-hdg-create.log"
+log_file="../../../logs/$(date +'%Y-%d-%m_%H-%M')-hdg-create.log"
 
 mc_details=("$(uname)" "$(lsb_release -c | awk '{print $2}')")
 cat << EOF >> "$log_file"

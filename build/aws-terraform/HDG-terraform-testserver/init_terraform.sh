@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define log file path for Terraform init operation
-init_log_file="../../../logs/$(date +'%Y-%d-%m')-hdg-terraform-init.log"
+init_log_file="../../../logs/$(date +'%Y-%d-%m_%H-%M')-hdg-terraform-init.log"
 
 
 mc_details=("$(uname)" "$(lsb_release -c | awk '{print $2}')")
