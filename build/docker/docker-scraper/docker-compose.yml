@@ -1,0 +1,23 @@
+services:
+  python_scraper:
+    image: desertroam/hadoophulligans:latest
+    volumes:
+      - scraper-db:/app/src
+      - ../logs:/app/logs
+    container_name: python-scraper
+
+  python-insertdb:
+    container_name: python-insertdb
+    image: desertroam/hadoophulligans:python-insertdb
+    volumes:
+      # some issue with volume not having python files from scraper try another volume
+      - /home/ubuntu/.env:/app/src/.env
+      - scraper-db:/app/src
+      - ../logs:/app/logs
+    depends_on:
+      python_scraper:
+        condition: service_completed_successfully
+
+volumes:
+  scraper-db:
+  data-db:

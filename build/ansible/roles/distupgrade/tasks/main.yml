@@ -1,0 +1,13 @@
+- name: Run the equivalent of "apt-get clean" as a separate step
+  become: true
+  apt:
+    clean: yes
+
+- name: install system updates for Debian system
+  become: true
+  apt: upgrade=dist update_cache=yes
+  when: ansible_distribution == "Debian"
+
+- name: "Cleaning up"
+  become: true
+  apt: autoremove=yes purge=yes

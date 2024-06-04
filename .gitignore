@@ -1,0 +1,28 @@
+*.tar.xz
+tutorial.conf
+postgrest
+db_params.json
+/.idea/
+/.venv/
+__pycache__
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Terraform variables
+*.tfvars
+
+# Terraform misc files
+.terraform.*
+
+
+/automated_download_script/
+.env
+
+logs/*
+
+src/.env
