@@ -1,3 +1,3 @@
 # to run must enter its directory
-cd ./build/docker/docker-scraper/start_scraper.sh
+cd ./build/docker/docker-scraper/
 bash start_scraper.sh
