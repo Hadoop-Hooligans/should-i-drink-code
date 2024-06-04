@@ -1,7 +1,5 @@
 """Intended to be run as a module"""
 
-import pandas as pd
-
 
 def clean_ecan(ecan_data):
     # print(ecan_data.head(10))

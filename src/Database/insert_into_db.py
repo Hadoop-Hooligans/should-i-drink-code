@@ -1,27 +1,19 @@
-import logging
-import sys
-import os
-from datetime import datetime
 import json
+import logging
+import os
+import sys
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 script_dir = os.path.join(current_dir, '..')
 sys.path.append(script_dir)
 
-import pandas as pd
-import connect_to_db
-
-
-# Get the full path of the current file
-file_path = sys.argv[0]
-
-# Get the base name of the file (i.e., file name with extension)
-base_name = os.path.basename(file_path)
+import Database.connect_to_db as connect_to_db
 
 # Remove the file extension
-file_name = os.path.splitext(base_name)[0]
+file_name = "insert_into_db"
 
-from ..log_parser.log_settings import *
+from log_parser.log_settings import *
+
 # call outside so function does not call gain this sets the date for the actual file.
 f_date = get_frozen_datetime()
 
@@ -45,7 +37,7 @@ def get_measurement_value(df, measurement):
                 }
 
 
-def insert_into_db(well_code, sample, collection_date, sub_df):
+def db_inserter(well_code, sample, collection_date, sub_df):
     connection = connect_to_db.connect_to_database()
     insert_into_recordings(conn=connection, well_code=well_code, sample=sample, collection_date=collection_date,
                            sub_df=sub_df)
@@ -84,7 +76,8 @@ def insert_into_recordings(conn, well_code, sample, collection_date, sub_df):
                 str(sample),
                 collection_date
             ))
-            insert_into_sample(conn=conn, sample_id=sample, collection_date=collection_date, sub_df=sub_df, well_code=well_code)
+            insert_into_sample(conn=conn, sample_id=sample, collection_date=collection_date, sub_df=sub_df,
+                               well_code=well_code)
             conn.commit()
             message = f"{sample} Data inserted"
             logging.info(message)

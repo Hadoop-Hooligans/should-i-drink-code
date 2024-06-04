@@ -1,17 +1,16 @@
-import sys
-import os
-
 # current_dir = os.path.dirname(os.path.abspath(__file__))
 # script_dir = os.path.join(current_dir, "..")
 # sys.path.append(script_dir)
 
-import Database.get_into_dataframe as gintod
-import Database.create_well_metadata_table as cwm
-import Database.connect_to_db as connect
-import Database.insert_into_well_metadata as insert_into_well
-import pandas as pd
 import os
 import sys
+
+import pandas as pd
+
+import Database.connect_to_db as connect
+import Database.create_well_metadata_table as cwm
+import Database.get_into_dataframe as gintod
+import Database.insert_into_well_metadata as insert_into_well
 
 # Get the full path of the current file
 file_path = sys.argv[0]
@@ -23,6 +22,7 @@ base_name = os.path.basename(file_path)
 file_name = os.path.splitext(base_name)[0]
 
 from log_parser.log_settings import *
+
 # call outside so function does not call gain this sets the date for the actual file.
 f_date = get_frozen_datetime()
 

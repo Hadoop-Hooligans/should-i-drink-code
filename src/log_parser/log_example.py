@@ -11,6 +11,7 @@ base_name = os.path.basename(file_path)
 file_name = os.path.splitext(base_name)[0]
 
 from log_settings import *
+
 # call outside so function does not call gain this sets the date for the actual file.
 f_date = get_frozen_datetime()
 

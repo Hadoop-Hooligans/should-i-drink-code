@@ -1,11 +1,10 @@
 import logging
-import os
-import requests
-import time
-import sys
 # some IDES may not understand this import but the docker file is not complaining.
 import os
 import sys
+import time
+
+import requests
 
 # Get the full path of the current file
 file_path = sys.argv[0]
@@ -17,6 +16,7 @@ base_name = os.path.basename(file_path)
 file_name = os.path.splitext(base_name)[0]
 
 from log_parser.log_settings import *
+
 # call outside so function does not call gain this sets the date for the actual file.
 f_date = get_frozen_datetime()
 
