@@ -73,7 +73,7 @@ variable "git_repo_dir" {
 
 variable "git_branch" {
   description = "The target branch to clone"
-  default     = "main"
+  default     = "develop"
   type        = string
 }
 
