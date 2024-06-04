@@ -47,7 +47,7 @@ resource "null_resource" "build_git_repo" {
       "cd ${var.git_repo_dir} && git pull origin ${var.git_branch}",
       "cd /home/ubuntu/${var.git_repo_dir}",
       "mkdir -p logs",
-      "sh ./scripts/controller-main.sh"
+      "sh ./scripts/setup-controller.sh"
     ]
   }
 }
