@@ -1,5 +1,5 @@
 from .log_jsonify import *
-
+import os
 
 def send_to_log(f_date, f_module="test"):
     # make sure logging directory exists.
