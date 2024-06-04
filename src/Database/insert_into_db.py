@@ -88,7 +88,7 @@ def insert_into_recordings(conn, well_code, sample, collection_date, sub_df):
             print(message)
             cur.close()
     except Exception as e:
-        message = "Inserting Data for {sample}: {e}"
+        message = f"Inserting Data for {sample}: {e}"
         logging.error(message)
         print(message)
 
