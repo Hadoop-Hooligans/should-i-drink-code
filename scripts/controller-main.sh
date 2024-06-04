@@ -1,1 +1,1 @@
-bash ../build/docker/docker-scraper/start_scraper.sh
+bash ./build/docker/docker-scraper/start_scraper.sh

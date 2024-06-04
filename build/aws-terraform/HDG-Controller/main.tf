@@ -47,7 +47,7 @@ resource "null_resource" "build_git_repo" {
       "cd ${var.git_repo_dir} && git pull origin ${var.git_branch}",
       "cd /home/ubuntu/${var.git_repo_dir}",
       "mkdir -p logs",
-      "sh scripts/setup-controller.sh"
+      "sh ./scripts/controller-main.sh"
     ]
   }
 }
@@ -72,7 +72,7 @@ resource "null_resource" "resume_configuration" {
       "echo 'AWS EC2 CONTROLLER ${var.instance_type}'",
       "echo 'starting scraper ${timestamp()}'",
       "cd /home/ubuntu/${var.git_repo_dir}",
-      "sh scripts/controller-main.sh"
+      "sh ./scripts/controller-main.sh"
       #       "cd /home/ubuntu/${var.git_repo_dir}/build/docker-scraper/",
       #       "alias activate='. ~/.venv/bin/activate'",
       #       "python3 -m venv ~/.venv && activate",

@@ -1,7 +1,7 @@
 #!/bin/bash
 # ensure terraform has been initialised
 bash init_terraform.sh
-log_file="../../logs/$(date +'%Y-%d-%m')-hdg-create.log"
+log_file="../../../logs/$(date +'%Y-%d-%m')-hdg-create.log"
 
 mc_details=("$(uname)" "$(lsb_release -c | awk '{print $2}')")
 cat << EOF >> "$log_file"
@@ -17,7 +17,15 @@ $(printf "%0.s-" {1..32})
 
 EOF
 
-args=("apply" "--auto-approve") 
+args=("apply" "--auto-approve")
+
+scriptfile='create_instance.sh' # should be script name
+
+echo "Please check $log_file to view any activities"
+
+
+echo "running $scriptfile" >> "$log_file"
+
 
 {
     time (
@@ -28,13 +36,6 @@ args=("apply" "--auto-approve")
 } 2>&1 | tee -a "$log_file"
 
 # I copied these over
-log_file="../../logs/$(date +'%Y-%d-%m-%H:%M')-pythonscraper.log"
-scriptfile='create_instance.sh' # should be script name 
-
-echo "Please check $log_file to view any activities"
-
-
-echo "running $scriptfile" >> "$log_file"
 
 # Copied this over
 #sudo docker run -it --name python-scraper $repo:$tag

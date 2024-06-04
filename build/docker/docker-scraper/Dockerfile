@@ -19,7 +19,7 @@ COPY requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application source code
-COPY ../../../src/ /app/src/
+COPY ./src/ /app/src/
 
 # Verify installations (optional, you can remove these lines if not needed)
 #RUN google-chrome --version
