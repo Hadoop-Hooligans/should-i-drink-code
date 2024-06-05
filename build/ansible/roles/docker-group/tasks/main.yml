@@ -1,0 +1,16 @@
+---
+- name: Ensure Docker group exists
+  ansible.builtin.group:
+    name: docker
+    state: present
+
+- name: Add user to Docker group
+  ansible.builtin.user:
+    name: "{{ docker_user }}"
+    groups: docker
+    append: yes
+
+- name: Force new group membership for the current session
+  ansible.builtin.shell:
+    cmd: "sg docker newgrp docker << EOF\nid\nEOF"
+  become_user: "{{ docker_user }}"

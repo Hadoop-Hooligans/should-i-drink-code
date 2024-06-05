@@ -1,0 +1,26 @@
+---
+- name: admin packages
+  hosts: localhost
+  roles:
+    - distupgrade
+
+- name: Install docker only
+  hosts: localhost
+  become: true
+  roles:
+    - docker-role
+
+- name: Install log server only
+  hosts: localhost
+  become: true
+  roles:
+    - logstash
+
+# placed here incase docker has not started yet
+- name: add user to docker role
+  hosts: localhost
+  become: true
+  roles:
+    - docker-group
+  vars:
+    docker_user: "ubuntu" # Replace with the actual username you want to add

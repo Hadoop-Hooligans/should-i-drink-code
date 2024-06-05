@@ -1,0 +1,4 @@
+- name: Install linux updates on local host
+  hosts: localhost
+  roles:
+    - distupgrade
