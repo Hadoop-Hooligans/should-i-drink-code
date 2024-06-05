@@ -11,6 +11,8 @@ The data is compared against accepted drinking water standards. The app visualiz
 
 ### How to use the web app
 
+## INSERT IMAGES HERE ON HOW SOMEONE WOULD USE THE WEBSITE
+
 ### Installation instructions
 
 #### Prerequisites
@@ -38,7 +40,11 @@ Database definitions can be reviewed [here](./docs/SHD_Data_Dictionary.pdf)
 
 ### Challenges, limitations and future improvements
 
-
+- One of the challenges with this project was getting the scripts to work within a docker container ... 
+- Another challenge was ...
+- .
+- .
+- .
 
 
 
