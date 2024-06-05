@@ -22,9 +22,9 @@ The following bullet points outline the software that should be already installe
 
     
 #### Setup Environment
-    * An AWS RDS (or equaivanent database infrastructure, using PostgreSQL)
-    * Setup .env file with DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME fields 
-    * Edit the fields of the main.tf and variables.tf such that it has your own credentials
+- An AWS RDS (or equaivanent database infrastructure, using PostgreSQL)
+- Setup .env file with DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME fields 
+- Edit the fields of the main.tf and variables.tf such that it has your own credentials
 
 # Starting the automation process
 Under the root directory of the git repository make sure a folder called "logs" exists.
