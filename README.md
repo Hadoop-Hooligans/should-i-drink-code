@@ -40,15 +40,13 @@ Database definitions can be reviewed [here](./docs/SHD_Data_Dictionary.pdf)
 
 ### Challenges, limitations and future improvements
 
+
+## Challenges
 - One of the challenges with this project was getting the scripts to work within a docker container ... 
-- Another challenge was ...
-- .
-- .
-- .
-
-
-
-
-
-
-
+- Getting terraform to work with remote-executor
+- Creating log friendly json output using python
+- Working with git branch conflicts
+## Future improvements
+- Having machine learning models
+- Data redundancy
+- More platform independance
