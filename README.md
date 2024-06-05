@@ -14,13 +14,34 @@ The data is compared against accepted drinking water standards. The app visualiz
 ### Installation instructions
 
 #### Prerequisites
+The following bullet points outline the software that should be already installed before trying to replicate our project:
+- AWS CLI and SAM installed <- Required for EC2 instances (Does not depend on anything)
+- Terraform installed <- Required for implementation of HDG-Controller (Depends on AWS-CLI and SAM)
+- Docker installed <- Required for on configuration of tasks (does not depend on anything)
+- Ansible installed <- required for configuration of various roles (does no depend on anything)
 
+    
 #### Setup Environment
+    * An AWS RDS (or equaivanent database infrastructure, using PostgreSQL)
+    * Setup .env file with DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME fields 
+    * Edit the fields of the main.tf and variables.tf such that it has your own credentials
 
-#### Setup Credentials
+# Starting the automation process
+Under the root directory of the git repository make sure a folder called "logs" exists.
 
-#### Database
+under the build\aws-terraform\HDG-Controller, run the create_instance.sh by using the following
+```sh
+bash create_instance.sh
+```
+
 Database definitions can be reviewed [here](./docs/SHD_Data_Dictionary.pdf)
+
+### Challenges, limitations and future improvements
+
+
+
+
+
 
 
 
