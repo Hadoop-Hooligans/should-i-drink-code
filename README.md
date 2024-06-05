@@ -1,5 +1,5 @@
 # Should I drink?
-[](cover_image.jpg)
+![](cover_image.jpg)
 
 ## A user friendly web app that provides up-to-date water quality statistics for your local area
 
