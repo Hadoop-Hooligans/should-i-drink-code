@@ -20,7 +20,7 @@ The data is compared against accepted drinking water standards. The app visualiz
 #### Setup Credentials
 
 #### Database
-
+Database definitions can be reviewed [here](./docs/SHD_Data_Dictionary.pdf)
 
 
 
