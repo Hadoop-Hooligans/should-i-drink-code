@@ -77,3 +77,15 @@ JacobR - Updated Docker script
 
 # Wednesday, 15 May 2024
 Julian - Updated wrangling.py and Scrapebook3 (Drinking Water Standards scraping)
+
+# Key Milestones
+Jacob R - Adapted technology to work with terraform
+Automation of tasks
+Jacob C - Adapted code to work without selenium
+More docker friendly
+
+Julian - Adapted logging scripts
+Added logging processes to the bash scripts
+
+Naman - Created web frontend
+Helpful search and location tagging website
