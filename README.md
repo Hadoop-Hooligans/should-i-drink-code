@@ -2,6 +2,7 @@
 ![](cover_image.jpg)
 
 ## A user friendly web app that provides up-to-date water quality statistics for your local area
+[Web App URL](http://http://13.211.188.171/)
 
 Christchurch’s drinking water is one of the best water supplies in the world. It is drawn from aquifers deep underground. It is regularly tested and maintained in line with the Drinking Water Standards for New Zealand. However, not everyone has access to a Council managed supply. Communities in rural areas may their own water supply. In the rural areas of Canterbury, agriculture is more prominent, [cow urine](https://www.phcc.org.nz/briefing/nitrate-contamination-drinking-water-and-adverse-birth-outcomes-emerging-evidence) and synthetic nitrogen fertilizer are used predominantly by the dairy industry and are leading sources of nitrate contamination. Private sources of water like domestic self-supplies are not subject to any monitoring, [which creates a risk to public health](https://environment.govt.nz/assets/publications/Freshwater/risks-associated-with-nitrates-in-drinking-water.pdf). \
 \
